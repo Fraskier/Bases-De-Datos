@@ -5,8 +5,8 @@ Clasifica cada sentencia SQL en su tipo correcto (DDL, DML, DCL o TCL):
 2.  SELECT * FROM productos;  DML
 3.  INSERT INTO ventas VALUES (1, 3, 150, '2025-01-10'); TIPO DML
 4.  GRANT SELECT ON clientes TO usuario_consulta; TIPO DCL
-5.  DROP TABLE movimientos; DDL
-6.  UPDATE productos SET unidades = 100 WHERE id = 1;  TIPO DDL
+5.  DROP TABLE movimientos; TIPO DDL
+6.  UPDATE productos SET unidades = 100 WHERE id = 1;  TIPO DML
 7.  COMMIT; TIPO TCL
 8.  REVOKE INSERT ON ventas FROM usuario_consulta; TIPO DCL
 9.  ALTER TABLE clientes ADD COLUMN email VARCHAR(100); TIPO DDL
@@ -18,11 +18,11 @@ Clasifica cada sentencia SQL en su tipo correcto (DDL, DML, DCL o TCL):
 Ejercicio 2 — Identifica los niveles ANSI/X3/SPARC
 Lee las siguientes descripciones e indica a qué nivel pertenece cada una:
 
-1. "La tabla CLIENTES tiene los campos ID, nombre, apellidos, dirección y teléfono."  PERTENECE A X3
-2. "Los datos se almacenan en ficheros .ibd en la carpeta /var/lib/mysql/tienda/." PERTENECE A SPARC
-3. "El personal de almacén solo puede ver productos y proveedores, no los datos de clientes." PERTENECE A ANSI
-4. "La tabla VENTAS tiene los campos ID, fecha, precio e ID cliente." PERTENECE A X3
-5. "Los índices se guardan en bloques de 16KB en disco." PERTENECE A SPARC
+1. "La tabla CLIENTES tiene los campos ID, nombre, apellidos, dirección y teléfono."  PERTENECE A NIVEL CONCEPTUAL
+2. "Los datos se almacenan en ficheros .ibd en la carpeta /var/lib/mysql/tienda/." PERTENECE A NIVEL INTERNO
+3. "El personal de almacén solo puede ver productos y proveedores, no los datos de clientes." PERTENECE A NIVEL EXTERNO
+4. "La tabla VENTAS tiene los campos ID, fecha, precio e ID cliente." PERTENECE A NIVEL CONCEPTUAL
+5. "Los índices se guardan en bloques de 16KB en disco." PERTENECE A NIVEL INTERNO
 
 
 
